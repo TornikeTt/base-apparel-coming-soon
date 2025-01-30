@@ -14,6 +14,7 @@ body {
 main {
   width: inherit;
   height: 100%;
+  position: relative;
 }
 
 header {
@@ -31,6 +32,12 @@ header .hero-image {
   width: min(580px, 55%);
   height: 100%;
   object-fit: cover;
+}
+
+.coming-soon {
+  position: absolute;
+  top: 240px;
+  left: 11%;
 }
 
 /*# sourceMappingURL=style.css.map */
