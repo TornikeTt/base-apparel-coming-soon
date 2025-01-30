@@ -11,20 +11,101 @@ body {
 }
 
 main {
-  width: inherit;
+  width: 100%;
   height: 100%;
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 .container {
   width: 430px;
+  margin-left: 11%;
+  margin-top: 70px;
+  overflow: auto;
+}
+
+.coming-soon {
+  margin-top: 120px;
+}
+
+.coming-soon__title {
+  color: hsl(0, 6%, 24%);
+  font-family: "Josefin Sans", serif;
+  font-weight: 500;
+  font-size: 66px;
+  text-transform: uppercase;
+  letter-spacing: 13px;
+}
+.coming-soon__title span {
+  color: hsl(0, 36%, 70%);
+  font-weight: 300;
+}
+
+.coming-soon__description {
+  margin-top: 20px;
+  color: hsl(0, 36%, 70%);
+  font-family: "Josefin Sans", serif;
+  line-height: 25px;
+}
+
+form {
+  margin-top: 40px;
+}
+form .form-group {
+  position: relative;
+  width: 100%;
+  height: 50px;
+}
+form .form-group .email {
+  width: inherit;
   height: inherit;
+  font-family: "Josefin Sans", serif;
+  font-size: 16px;
+  color: hsl(0, 6%, 24%);
+  border: thin solid hsl(0, 36%, 70%);
+  outline: none;
+  border-radius: 20px;
+  padding-left: 28px;
+  opacity: 0.5;
+}
+form .form-group .email::placeholder {
+  color: hsl(0, 36%, 70%);
+}
+form .form-group .error-icon {
+  position: absolute;
+  top: 50%;
+  right: 110px;
+  transform: translateY(-50%);
+}
+form .form-group .submit {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 90px;
+  height: 50px;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  cursor: pointer;
+}
+form .form-group .submit:focus {
+  opacity: 0.5;
+}
+form .error-message {
+  margin-top: 10px;
+  font-family: "Josefin Sans", serif;
+  font-weight: bold;
+  padding-left: 28px;
+  font-size: 12px;
+  color: hsl(0, 93%, 68%);
 }
 
 .hero {
-  width: min(580px, 55%);
-  height: inherit;
+  width: min(580px, 42%);
+  height: 100%;
   background: url("../images/hero-desktop.jpg") no-repeat center/cover;
 }
 
