@@ -9,7 +9,9 @@ form.addEventListener("submit", (e) => {
     if (input.value == "") {
         errorMessage.innerText = "Email cannot be empty";
         errorMessage.style.display = "block";
+
         errorIcon.style.display = "block";
+
         input.style.borderWidth = "2px";
         input.style.borderColor = "red";
     } else {
@@ -19,11 +21,19 @@ form.addEventListener("submit", (e) => {
         if (isValid) {
             errorMessage.innerText = "";
             errorMessage.style.display = "none";
+
             errorIcon.style.display = "none";
+
+            input.style.borderWidth = "1px";
+            input.style.borderColor = "hsl(0, 36%, 70%)";
         } else {
             errorMessage.innerText = "Please provide a valid email";
+
             errorMessage.style.display = "block";
             errorIcon.style.display = "block";
+
+            input.style.borderWidth = "2px";
+            input.style.borderColor = "red";
         }
     }
 });
