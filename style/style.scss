@@ -23,9 +23,31 @@ body {
     width: 100%;
     height: 100vh;
     overflow: hidden;
+
+    background: $G1_light-gradient;
 }
 
 main {
     width: inherit;
     height: 100%;
+}
+
+header {
+    width: inherit;
+    height: inherit;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    .logo {
+        margin-left: 11%;
+        margin-top: 70px;
+    }
+
+    .hero-image {
+        width: min(580px, 55%);
+        height: 100%;
+        object-fit: cover;
+    }
 }
