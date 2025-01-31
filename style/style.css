@@ -27,9 +27,9 @@ main {
   grid-column: 2/-1;
   grid-row: 1/-1;
   width: min(580px, 100%);
-  justify-self: flex-end;
   height: 100%;
   background: url("../images/hero-desktop.jpg") no-repeat center/cover;
+  justify-self: flex-end;
 }
 
 .coming-soon {
@@ -76,6 +76,8 @@ form .form-group .email {
   outline: none;
   border-radius: 20px;
   padding-left: 28px;
+  padding-right: 150px;
+  text-overflow: ellipsis;
   opacity: 0.5;
 }
 form .form-group .email::placeholder {
@@ -113,6 +115,55 @@ form .error-message {
   padding-left: 28px;
   font-size: 12px;
   color: hsl(0, 93%, 68%);
+}
+
+@media (max-width: 1180px) {
+  .logo-container,
+  .coming-soon {
+    margin-left: 50px;
+    width: 90%;
+  }
+  .hero {
+    width: 85%;
+  }
+}
+@media (max-width: 375px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 250px 1fr;
+  }
+  .logo-container {
+    width: 200px;
+    margin-top: 0;
+    margin-left: 40px;
+    align-self: center;
+  }
+  .hero {
+    grid-column: 1;
+    grid-row: 2/3;
+    width: 100%;
+    height: 100%;
+    background: url("../images/hero-mobile.jpg") no-repeat center/cover;
+    justify-self: auto;
+  }
+  .coming-soon {
+    width: 84%;
+    margin-left: 0;
+    margin-top: 50px;
+    justify-self: center;
+  }
+  .coming-soon__title {
+    text-align: center;
+    font-size: 40px;
+    letter-spacing: 13px;
+  }
+  .coming-soon__description {
+    text-align: center;
+    font-size: 14px;
+  }
+  form {
+    padding-bottom: 40px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
