@@ -26,6 +26,11 @@ form.addEventListener("submit", (e) => {
 
             input.style.borderWidth = "1px";
             input.style.borderColor = "hsl(0, 36%, 70%)";
+            input.value = "";
+
+            setTimeout(() => {
+                alert("Your email was successfully sent. ✅");
+            });
         } else {
             errorMessage.innerText = "Please provide a valid email";
 
